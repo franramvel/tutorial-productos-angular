@@ -8,7 +8,7 @@ import {Routes } from '@angular/router';
 export const AppRoutes:Routes=[
   {
     path:'productos',
-    loadComponent: ()=> import('./containers/productos/productos.component').then(x=>x.ProductosComponent),
+    loadComponent: ()=> import('./containers/productos.container/productos.container.component').then(x=>x.ProductosContainerComponent),
     //para la unyeccion de dependencias se colocan aqui los modulos a ocupar
     // providers:[importProvidersFrom(HttpClientModule,HttpClientXsrfModule.withOptions({ cookieName: 'csrftoken', headerName: 'X-CSRFToken' }))]
   },
