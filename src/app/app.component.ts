@@ -1,10 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  standalone:true,
+  changeDetection:ChangeDetectionStrategy.OnPush,
+  imports:[RouterModule],
+  template: ` <div class="app">
+    <router-outlet></router-outlet>
+  </div> `,
+  styles: [
+    `
+    `
+  ]
 })
-export class AppComponent {
-  title = 'tutorial-productos';
+export class AppComponent{
+
+
+  title = 'Productos App';
+
+  constructor(
+
+  ){
+  }
+
 }
