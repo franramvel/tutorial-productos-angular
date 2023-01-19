@@ -1,40 +1,40 @@
 <mat-card>
     <mat-card-header><h1>Categoria</h1></mat-card-header>
     <mat-card-content>
-      <form id="formulario1" name="formulario1" method="post" action="data.php">
+      <form #form="ngForm">
         <div class="form-content">
           <mat-form-field appearance="outline">
             <mat-label>Id</mat-label>
-            <input matInput placeholder="Id">
+            <input
+              matInput
+              placeholder="Id"
+              name="id"
+              [ngModel]="model.id"
+              >
             <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
           </mat-form-field>
-  
+
           <mat-form-field appearance="outline">
-            <mat-label>Precio</mat-label>
-            <input matInput placeholder="Precio">
-            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-          </mat-form-field>
-  
-          <mat-form-field appearance="outline">
-            <mat-label>Descripcion</mat-label>
-            <input matInput placeholder="Descripcion">
-            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-          </mat-form-field>
-  
-          <mat-form-field appearance="outline">
-            <mat-label>BarCode</mat-label>
-            <input matInput placeholder="BarCode">
-            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-          </mat-form-field>
-  
-          <mat-form-field appearance="outline">
-            <mat-label>CategoriaId</mat-label>
-            <input matInput placeholder="CategoriaId">
+            <mat-label>Valor</mat-label>
+            <input
+              matInput
+              placeholder="Valor"
+              name="valor"
+              [ngModel]="model.valor"
+              >
             <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
           </mat-form-field>
         </div>
-  
-  
+
+
       </form>
     </mat-card-content>
   </mat-card>
+
+  <!-- Mi objeto modelo, transformalo en json e imprimelo en html -->
+  ESTE ES EL MODELO
+  <pre>{{model|json}}</pre>
+
+  <hr>
+  ESTE ES EL FORMULARIO
+  <pre>{{form.value|json}}</pre>
